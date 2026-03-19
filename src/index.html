@@ -3,7 +3,117 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>THEClima - Weater App</title>
+		<title>THEClima - Weather App</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="app__header">
+			<h1 class="app__header-title">THEClima</h1>
+			<div class="app__header-actions">
+				<button class="app__header-btn app__header-btn--celsius">°C</button>
+				<button class="app__header-btn app__header-btn--fahrenheit">°F</button>
+			</div>
+		</header>
+		<main class="app__content">
+			<section class="app__form-section">
+				<form class="app__form">
+					<label for="location" class="app__form-label">Enter a location</label>
+					<input
+						type="text"
+						name="location"
+						id="location"
+						class="app__form-input"
+						placeholder="Search location..."
+						required
+					/>
+					<button type="submit" class="app__form-btn">Search</button>
+				</form>
+			</section>
+
+			<section class="app__content-section">
+				<div class="loader" hidden aria-hidden></div>
+				<p class="error" hidden aria-hidden></p>
+
+				<div class="weather" hidden aria-hidden>
+					<div class="weather__city"></div>
+					<div class="weather__temp"></div>
+					<div class="weather__condition"></div>
+					<div class="weather__feels-like"></div>
+					<div class="weather__humidity"></div>
+				</div>
+
+				<div class="forecast" hidden aria-hidden>
+					<ul class="forecast__list">
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+						<li class="forecast__item">
+							<h3 class="forecast__day"></h3>
+							<div class="forecast__icon"></div>
+							<p class="forecast__condition"></p>
+							<p class="forecast__temp-max"></p>
+							<p class="forecast__temp-min"></p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="app__footer">
+			<p class="app__footer-text">
+				Coded and Designed by
+				<a
+					href="https://github.com/gvillarroel-dev"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="app__footer-link"
+					>Villarroel Giuliana</a>
+				| A project from
+				<a
+					href="https://www.theodinproject.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="app__footer-link"
+					>The Odin Project</a>
+			</p>
+		</footer>
+	</body>
 </html>
