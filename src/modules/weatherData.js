@@ -37,3 +37,8 @@ export const convertTemp = (temp, unit) => {
 		return +((temp * 9) / 5 + 32).toFixed(1);
 	}
 };
+
+export const formatDay = (date) => {
+	const [year, month, day] = date.split("-");
+	return new Date(year, month - 1, day).toLocaleDateString("en-US", { weekday: "long" });
+};
