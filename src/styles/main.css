@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
+
+:root {
+	--font-display: "DM Serif Display", serif;
+	--font-body: "DM Sans", sans-serif;
+	--color-bg: #f7f5f0;
+	--color-text: #1c1c1a;
+	--color-muted: #888780;
+	--color-accent: #378add;
+	--radius: 16px;
+	--max-width: 560px;
+
+	--transition-bg: background-color 0.4s ease-in;
+	--transition-base: all 0.3s ease;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+
+	background: var(--color-bg);
+	color: var(--color-text);
+	transition: var(--transition-bg);
+}
+
+body.theme-sunny {
+	--color-bg: #fff8e7;
+}
+
+body.theme-cloudy {
+	--color-bg: #eef2f7;
+}
+
+body.theme-snow {
+	--color-bg: #f0f4f8;
+}
+
+body.theme-rainy {
+	--color-bg: #e8eef5;
+}
+
+body.theme-night {
+	--color-bg: #1c2333;
+}
+
+/* ====================== HEADER ====================== */
+.app__header {
+	width: 100%;
+	padding: 0.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.app__header-title {
+	font-size: clamp(1.5rem, 3vw + 0.3rem, 1.8rem);
+	font-family: var(--font-display);
+	font-weight: 500;
+	letter-spacing: 1.2px;
+}
+
+.app__header-actions {
+	display: inline-flex;
+	gap: 0.5rem;
+}
+
+.app__header-btn {
+	padding: 0.3rem 0.6rem;
+	border-radius: 0.5rem;
+	border: 2px solid transparent;
+	cursor: pointer;
+
+	color: var(--color-bg);
+	background: var(--color-text);
+	font-size: clamp(0.8rem, 2vw + 0.2rem, 1.2rem);
+	font-weight: 800;
+	font-family: var(--font-body);
+	transition: var(--transition-base);
+}
+
+.app__header-btn:hover {
+	color: var(--color-bg);
+	background: var(--color-muted);
+	border-color: var(--color-muted);
+}
+
+.app__header-btn--celsius {
+	background: var(--color-bg);
+	color: var(--color-text);
+	border: 2px solid var(--color-text);
+}
