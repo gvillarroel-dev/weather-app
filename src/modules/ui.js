@@ -138,7 +138,6 @@ export const renderWeather = (data, unit) => {
 		forecast.appendChild(card);
 	});
 
-
 	// ------------ append container ------------
 	container.appendChild(primaryCard);
 	container.appendChild(secondaryCard);
@@ -147,4 +146,23 @@ export const renderWeather = (data, unit) => {
 	container.hidden = false;
 	container.setAttribute("aria-hidden", "false");
 	return container;
+};
+
+export const setTheme = (icon) => {
+    const body = document.querySelector("body");
+    body.className = "";
+
+    if (icon.includes("sunny") || icon.includes("clear")) {
+        body.classList.add("theme-sunny");
+    } else if (icon.includes("cloud")) {
+        body.classList.add("theme-cloudy");
+    } else if (icon.includes("rain")) {
+        body.classList.add("theme-rainy");
+    } else if (icon.includes("snow")) {
+        body.classList.add("theme-snow");
+    } else if (icon.includes("night")) {
+        body.classList.add("theme-night");
+    } else {
+        body.classList.add("theme-default");
+    }
 };
