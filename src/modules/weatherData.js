@@ -7,6 +7,7 @@ export const processWeatherData = (json) => {
 	const uvindex = json.currentConditions.uvindex;
 	const precipitation = json.currentConditions.precip;
 	const icon = json.currentConditions.icon;
+	const timezone = json.timezone;
 	const forecast = [];
 
 	for (let i = 0; i < 7; i++) {
@@ -27,6 +28,7 @@ export const processWeatherData = (json) => {
 		uvindex,
 		precipitation,
 		icon,
+		timezone,
 		forecast,
 	};
 };
