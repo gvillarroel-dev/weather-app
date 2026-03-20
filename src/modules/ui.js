@@ -124,11 +124,11 @@ export const renderWeather = (data, unit) => {
 
 		const max = document.createElement("p");
 		max.classList.add("forecast__maxtemp");
-		max.textContent = item.tempMax;
+		max.textContent = `Max: ${item.tempMax}`;
 
 		const min = document.createElement("p");
 		min.classList.add("forecast__mintemp");
-		min.textContent = item.tempMin;
+		min.textContent = `Min: ${item.tempMin}`;
 
 		card.appendChild(day);
 		card.appendChild(dayCondition);
