@@ -4,6 +4,8 @@ export const processWeatherData = (json) => {
 	const feelsLike = json.currentConditions.feelslike;
 	const humidity = json.currentConditions.humidity;
 	const condition = json.currentConditions.conditions;
+	const uvindex = json.currentConditions.uvindex;
+	const precipitation = json.currentConditions.precip;
 	const icon = json.currentConditions.icon;
 	const forecast = [];
 
@@ -22,6 +24,8 @@ export const processWeatherData = (json) => {
 		feelsLike,
 		humidity,
 		condition,
+		uvindex,
+		precipitation,
 		icon,
 		forecast,
 	};
