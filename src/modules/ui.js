@@ -113,7 +113,7 @@ export const renderWeather = (data, unit) => {
 
 		const icon = document.createElement("span");
 		icon.classList.add("forecast__icon");
-		icon.textContent = item.icon;
+		icon.textContent = "☀️";
 
 		const condition = document.createElement("p");
 		condition.classList.add("forecast__condition");
@@ -124,11 +124,11 @@ export const renderWeather = (data, unit) => {
 
 		const max = document.createElement("p");
 		max.classList.add("forecast__maxtemp");
-		max.textContent = `Max: ${item.tempMax}`;
+		max.textContent = `${convertTemp(item.tempMax, unit)}°`;
 
 		const min = document.createElement("p");
 		min.classList.add("forecast__mintemp");
-		min.textContent = `Min: ${item.tempMin}`;
+		min.textContent = `${convertTemp(item.tempMin, unit)}°`;
 
 		card.appendChild(day);
 		card.appendChild(dayCondition);
