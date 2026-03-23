@@ -404,3 +404,30 @@ body.theme-night {
 .app__footer-link:hover {
 	color: var(--color-card-muted);
 }
+
+
+/* ====================== UTILITIES ====================== */
+.loader {
+	width: 32px;
+	height: 32px;
+	margin: 2rem auto;
+	display: block;
+
+	border: 3px solid var(--color-muted);
+	border-radius: 100%;
+	border-left-color: var(--color-card-text);
+	animation: spin 0.8s linear infinite;
+}
+
+.loader[hidden] {
+	display: none;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
