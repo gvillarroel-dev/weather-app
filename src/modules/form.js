@@ -36,6 +36,9 @@ export const initForm = () => {
 	const celsiusBtn = document.querySelector(".app__header-btn--celsius");
 	celsiusBtn.addEventListener("click", () => {
 		currentUnit = "C";
+		celsiusBtn.classList.add("app__header-btn--active");
+		fahrenheitBtn.classList.remove("app__header-btn--active");
+
 		if (lastData) {
 			renderWeather(lastData, currentUnit);
 			setTheme(lastData.icon);
@@ -45,6 +48,9 @@ export const initForm = () => {
 	const fahrenheitBtn = document.querySelector(".app__header-btn--fahrenheit");
 	fahrenheitBtn.addEventListener("click", () => {
 		currentUnit = "F";
+		fahrenheitBtn.classList.add("app__header-btn--active");
+    	celsiusBtn.classList.remove("app__header-btn--active");
+		
 		if (lastData) {
 			renderWeather(lastData, currentUnit);
 			setTheme(lastData.icon);
