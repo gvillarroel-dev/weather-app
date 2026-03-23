@@ -405,7 +405,6 @@ body.theme-night {
 	color: var(--color-card-muted);
 }
 
-
 /* ====================== UTILITIES ====================== */
 .loader {
 	width: 32px;
@@ -430,4 +429,16 @@ body.theme-night {
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+/* ---------------------- error ---------------------- */
+.error {
+	text-align: center;
+	padding: 1rem;
+	color: #a32d2d;
+	font-size: 0.85rem;
+}
+
+.error[hidden] {
+	display: none;
 }
