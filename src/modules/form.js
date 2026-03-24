@@ -34,6 +34,8 @@ export const initForm = () => {
 	});
 
 	const celsiusBtn = document.querySelector(".app__header-btn--celsius");
+	celsiusBtn.classList.add("app__header-btn--active");
+
 	celsiusBtn.addEventListener("click", () => {
 		currentUnit = "C";
 		celsiusBtn.classList.add("app__header-btn--active");
