@@ -26,8 +26,10 @@ export const initForm = () => {
 			lastData = processWeatherData(rawData);
 			renderWeather(lastData, currentUnit);
 			setTheme(lastData.icon);
+			form.reset();
 		} catch (error) {
 			showError("Location not found. Please try again.");
+			form.reset();
 		} finally {
 			hideLoader();
 		}
