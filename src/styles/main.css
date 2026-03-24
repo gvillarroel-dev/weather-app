@@ -60,13 +60,13 @@ body.theme-rainy {
 }
 
 body.theme-night {
-    --color-bg: #1c2333;
-    --color-text: #f7f5f0;
-    --color-muted: #b4b2a9;
-    --color-card: #1c2a3a;
-    --color-card-border: #0c447c;
-    --color-card-text: #b5d4f4;
-    --color-card-muted: #85b7eb;
+	--color-bg: #1c2333;
+	--color-text: #f7f5f0;
+	--color-muted: #b4b2a9;
+	--color-card: #1c2a3a;
+	--color-card-border: #0c447c;
+	--color-card-text: #b5d4f4;
+	--color-card-muted: #85b7eb;
 }
 
 /* ====================== HEADER ====================== */
@@ -448,4 +448,21 @@ body.theme-night {
 
 .error[hidden] {
 	display: none;
+}
+
+/* ====================== MEDIA QUERIES ====================== */
+@media (min-width: 768px) {
+	.app__form {
+		flex-direction: row;
+		gap: 1rem;
+	}
+
+	.app__form-input {
+		width: 80%;
+		margin: auto;
+	}
+
+	.app__form-btn {
+		width: 20%;
+	}
 }
