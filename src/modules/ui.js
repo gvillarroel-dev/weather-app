@@ -1,4 +1,4 @@
-import { convertTemp, formatDay } from "./weatherData";
+import { convertTemp, formatDay, getWeatherIcon } from "./weatherData.js";
 
 const loader = document.querySelector(".loader");
 const error = document.querySelector(".error");
@@ -45,7 +45,7 @@ export const renderWeather = (data, unit) => {
 	// icon
 	const icon = document.createElement("div");
 	icon.classList.add("weather__icon");
-	icon.textContent = data.icon;
+	icon.textContent = getWeatherIcon(data.icon);
 
 	// temperature
 	const temp = document.createElement("p");
@@ -113,7 +113,7 @@ export const renderWeather = (data, unit) => {
 
 		const icon = document.createElement("span");
 		icon.classList.add("forecast__icon");
-		icon.textContent = "☀️";
+		icon.textContent = getWeatherIcon(item.icon);
 
 		const condition = document.createElement("p");
 		condition.classList.add("forecast__condition");
