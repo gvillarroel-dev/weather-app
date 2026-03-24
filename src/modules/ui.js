@@ -1,5 +1,7 @@
 import { convertTemp, formatDay, getWeatherIcon } from "./weatherData.js";
 
+let clockInterval = null;
+
 const loader = document.querySelector(".loader");
 const error = document.querySelector(".error");
 
@@ -37,10 +39,20 @@ export const renderWeather = (data, unit) => {
 	city.classList.add("weather__city");
 	city.textContent = data.city;
 
-	// hour
+	// ---- clock ----
 	const hour = document.createElement("p");
 	hour.classList.add("weather__hour");
-	hour.textContent = data.timezone;
+
+	if (clockInterval) clearInterval(clockInterval);
+	const updateClock = () => {
+		hour.textContent = new Date().toLocaleTimeString("en-US", {
+			timeZone: data.timezone,
+			hour: "2-digit",
+			minute: "2-digit",
+		});
+	}
+	updateClock();
+	clockInterval = setInterval(updateClock, 1000);
 
 	// icon
 	const icon = document.createElement("div");
@@ -166,3 +178,4 @@ export const setTheme = (icon) => {
         body.classList.add("theme-default");
     }
 };
+
