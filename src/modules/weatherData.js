@@ -44,3 +44,63 @@ export const formatDay = (date) => {
 	const [year, month, day] = date.split("-");
 	return new Date(year, month - 1, day).toLocaleDateString("en-US", { weekday: "long" });
 };
+
+export const getWeatherIcon = (icon) => {
+	let weatherIcon = "";
+	switch(icon) {
+		case "clear-day":
+			weatherIcon = "☀️";
+			break;
+		case "clear-night":
+			weatherIcon = "🌙";
+			break;
+		case "partly-cloudy-day":
+			weatherIcon = "⛅";
+			break;
+		case "partly-cloudy-night":
+			weatherIcon = "🌃";
+			break;
+		case "cloudy":
+			weatherIcon = "☁️";
+			break;
+		case "rain":
+			weatherIcon = "🌧️";
+			break;
+		case "showers-day":
+			weatherIcon = "🌦️"
+			break;
+		case "showers-night":
+			weatherIcon = "🌧️";
+			break;
+		case "thunder-rain":
+			weatherIcon = "⛈️";
+			break;
+		case "thunder-showers-day":
+			weatherIcon = "⛈️";
+			break;
+		case "thunder-showers-night":
+			weatherIcon = "⛈️";
+			break;
+		case "snow":
+			weatherIcon = "❄️";
+			break;
+		case "snow-showers-day":
+			weatherIcon = "🌨️";
+			break;
+		case "snow-showers-night":
+			weatherIcon = "🌨️";
+			break;
+		case "sleet":
+			weatherIcon = "🌨️";
+			break;
+		case "fog":
+			weatherIcon = "🌫️";
+			break;
+		case "wind":
+			weatherIcon = "💨";
+			break;
+		default:
+			weatherIcon = "🌡️";
+	}
+	return weatherIcon;
+}
